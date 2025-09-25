@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bobur Niyozov\\Desktop\\DotNet\\webapp\\webapp.csproj": {}
+    "C:\\bobur\\Github\\dotnet_web_api\\webapp\\webapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bobur Niyozov\\Desktop\\DotNet\\webapp\\webapp.csproj": {
+    "C:\\bobur\\Github\\dotnet_web_api\\webapp\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bobur Niyozov\\Desktop\\DotNet\\webapp\\webapp.csproj",
+        "projectUniqueName": "C:\\bobur\\Github\\dotnet_web_api\\webapp\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "C:\\Users\\Bobur Niyozov\\Desktop\\DotNet\\webapp\\webapp.csproj",
+        "projectPath": "C:\\bobur\\Github\\dotnet_web_api\\webapp\\webapp.csproj",
         "packagesPath": "C:\\Users\\Bobur Niyozov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bobur Niyozov\\Desktop\\DotNet\\webapp\\obj\\",
+        "outputPath": "C:\\bobur\\Github\\dotnet_web_api\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
