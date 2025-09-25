@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using webapp.Data;
 using webapp.Dtos.Stock;
+using webapp.Helpers;
 using webapp.Interfaces;
 using webapp.Mappers;
 using webapp.Models;
@@ -15,9 +16,28 @@ namespace webapp.Repository
       _context = context;
     }
 
-    public async Task<List<Stock>> GetAllAsync()
+    public async Task<List<Stock>> GetAllAsync(QueryObject query)
     {
-      return await _context.Stocks.Include(c => c.Comments).ToListAsync();
+      var stocks = _context.Stocks.Include(c => c.Comments).AsQueryable();
+
+      if (!string.IsNullOrWhiteSpace(query.CompanyName))
+      {
+        stocks = stocks.Where(s => s.CompanyName.Contains(query.CompanyName));
+      }
+      if (!string.IsNullOrWhiteSpace(query.Symbol))
+      {
+        stocks = stocks.Where(s => s.Symbol.Contains(query.Symbol));
+      }
+
+      if (!string.IsNullOrWhiteSpace(query.SortBy))
+      {
+        if (query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
+        {
+          stocks = query.IsDecending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
+        }
+      }
+
+      return await stocks.ToListAsync();
     }
 
     public async Task<Stock?> GetByIdAsync(int id)
@@ -57,5 +77,6 @@ namespace webapp.Repository
     {
       return _context.Stocks.AnyAsync(s => s.Id == id);
     }
+
   }
 }
