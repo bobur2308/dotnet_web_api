@@ -3,7 +3,6 @@ using webapp.Data;
 using webapp.Dtos.Stock;
 using webapp.Helpers;
 using webapp.Interfaces;
-using webapp.Mappers;
 using webapp.Models;
 
 namespace webapp.Repository
@@ -36,8 +35,9 @@ namespace webapp.Repository
           stocks = query.IsDecending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
         }
       }
+      var skip = (query.Page - 1) * query.PageSize;
 
-      return await stocks.ToListAsync();
+      return await stocks.Skip(skip).Take(query.PageSize).ToListAsync();
     }
 
     public async Task<Stock?> GetByIdAsync(int id)
