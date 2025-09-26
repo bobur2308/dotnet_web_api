@@ -337,3 +337,9 @@ C:\bobur\Github\dotnet_web_api\webapp\obj\Debug\net9.0\refint\webapp.dll
 C:\bobur\Github\dotnet_web_api\webapp\obj\Debug\net9.0\webapp.pdb
 C:\bobur\Github\dotnet_web_api\webapp\obj\Debug\net9.0\webapp.genruntimeconfig.cache
 C:\bobur\Github\dotnet_web_api\webapp\obj\Debug\net9.0\ref\webapp.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\bobur\Github\dotnet_web_api\webapp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
